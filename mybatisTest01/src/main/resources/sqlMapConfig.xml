@@ -31,6 +31,6 @@
     <!--   记载映射文件路径-->
     <mappers>
         <mapper resource="com/xiaoren/mapper/DeptMapper.xml"/>
-        <!--        <package name="com.xiaoren.pojo"/>-->
+        <!--      扫描包  <package name="com.xiaoren.mapper"/>-->
     </mappers>
 </configuration>
