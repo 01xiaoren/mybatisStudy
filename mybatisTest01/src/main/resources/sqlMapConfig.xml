@@ -9,6 +9,13 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
+    <!--  起别名-->
+    <typeAliases>
+        <!--   单个-->
+        <!-- <typeAlias type="com.xiaoren.pojo.Dept" alias="dept"/>-->
+        <!-- 文件包起别名那后缀名类的小写字母名字-->
+        <package name="com.xiaoren.pojo"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -24,5 +31,6 @@
     <!--   记载映射文件路径-->
     <mappers>
         <mapper resource="com/xiaoren/mapper/DeptMapper.xml"/>
+        <!--        <package name="com.xiaoren.pojo"/>-->
     </mappers>
 </configuration>
