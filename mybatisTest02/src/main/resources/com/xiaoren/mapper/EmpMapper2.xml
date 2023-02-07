@@ -52,4 +52,5 @@ emp >>>  deptno   sal
         where deptno = #{deptno}
           and sal &gt;= #{sal}
     </select>
+
 </mapper>
