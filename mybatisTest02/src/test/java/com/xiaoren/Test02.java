@@ -60,6 +60,7 @@ public class Test02 {
         }
     }
 
+
     @After
     public void release() {
         //关闭sqlSession
