@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoren.mapper.EmpMapper">
+    <!--   List<Emp> findByCondition()-->
+    <select id="findByCondition" resultType="emp">
+        select * from emp
+        <!-- 只会选择其一只执行；
+
+        -->
+        <where>
+            <choose>
+                <when test="empno != null">
+                    and empno = #{empno}
+                </when>
+                <when test="ename != null and ename != ''">
+                    and ename like concat('%',#{ename},'%')
+                </when>
+                <when test="job != null and job != ''">
+                    and job =#{job}
+                </when>
+                <when test="mgr != null">
+                    and mgr =#{mgr}
+                </when>
+                <when test="hiredate != null">
+                    and hiredate =#{hiredate}
+                </when>
+                <when test="sal != null">
+                    and sal =#{sal}
+                </when>
+                <when test="comm != null">
+                    and comm =#{comm}
+                </when>
+                <when test="deptno != null">
+                    and deptno =#{deptno}
+                </when>
+            </choose>
+        </where>
+    </select>
+</mapper>
