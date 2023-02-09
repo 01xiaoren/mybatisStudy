@@ -4,6 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MyBatisAll.iml" filepath="$PROJECT_DIR$/.idea/MyBatisAll.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisTest01/mybatisTest01.iml" filepath="$PROJECT_DIR$/mybatisTest01/mybatisTest01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest02/mybatisTest02.iml" filepath="$PROJECT_DIR$/mybatisTest02/mybatisTest02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest03/mybatisTest03.iml" filepath="$PROJECT_DIR$/mybatisTest03/mybatisTest03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest04/mybatisTest04.iml" filepath="$PROJECT_DIR$/mybatisTest04/mybatisTest04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest05/mybatisTest05.iml" filepath="$PROJECT_DIR$/mybatisTest05/mybatisTest05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest06/mybatisTest06.iml" filepath="$PROJECT_DIR$/mybatisTest06/mybatisTest06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest07/mybatisTest07.iml" filepath="$PROJECT_DIR$/mybatisTest07/mybatisTest07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisTest08/mybatisTest08.iml" filepath="$PROJECT_DIR$/mybatisTest08/mybatisTest08.iml" />
     </modules>
   </component>
 </project>

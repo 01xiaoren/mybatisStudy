@@ -4,10 +4,17 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatisTest01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest02/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest03/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest04/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest05/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest06/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest07/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisTest08/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

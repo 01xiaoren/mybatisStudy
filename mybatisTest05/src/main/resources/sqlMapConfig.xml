@@ -30,6 +30,7 @@
     </environments>
     <!--   记载映射文件路径-->
     <mappers>
-        <mapper class="com.xiaoren.mapper.EmpMapper"/>
+<!--        <mapper class="com.xiaoren.mapper.EmpMapper"/>-->
+        <package name="com.xiaoren.mapper"/>
     </mappers>
 </configuration>

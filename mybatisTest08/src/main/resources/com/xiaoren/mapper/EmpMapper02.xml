@@ -7,7 +7,6 @@
     <select id="findByCondition" resultType="emp">
         select * from emp
         <!-- 只会选择其一只执行；
-
         -->
         <where>
             <choose>
