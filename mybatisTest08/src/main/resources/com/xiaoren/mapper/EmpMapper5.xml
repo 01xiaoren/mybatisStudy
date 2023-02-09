@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoren.mapper.EmpMapper">
+
+    <!-- sql起别名减少储存空间-->
+    <sql id="empColumn">empno
+    ,ename,job,mgr,hiredate,sal,comm,deptno</sql>
+    <sql id="baseSelect">select <include refid="empColumn"></include> from emp
+    </sql>
+    <!--List<Emp> findByCondition(Emp emp);-->
+
+
+    <select id="findByCondition" resultType="emp">
+        <include refid="baseSelect"></include>
+        <trim prefix="where" prefixOverrides="and">
+            <if test="empno != null">
+                and empno =#{empno}
+            </if>
+            <if test="ename != null and ename != ''">
+                <bind name="likePattern" value="'%'+ename+'%'"/>
+                and ename like #{likePattern}
+            </if>
+            <if test="job != null and job != ''">
+                and job =#{job}
+            </if>
+            <if test="mgr != null">
+                and mgr =#{mgr}
+            </if>
+            <if test="hiredate != null">
+                and hiredate =#{hiredate}
+            </if>
+            <if test="sal != null">
+                and sal =#{sal}
+            </if>
+            <if test="comm != null">
+                and comm =#{comm}
+            </if>
+            <if test="deptno != null">
+                and deptno =#{deptno}
+            </if>
+        </trim>
+    </select>
+
+</mapper>
