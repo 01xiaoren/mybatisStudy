@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoren.mapper.EmpMapper">
+    <!--int updateEmpByCondtion(Emp emp);-->
+
+    <!--trim处理set-->
+    <update id="updateEmpByCondition2" >
+        update emp
+        <!--prefix 要增加什么前缀
+        prefixOverrides 要去除什么前缀
+        suffix 要增加什么后缀
+        suffixOverrides 要去除什么后缀
+        set 是trim的一种特殊情况
+        -->
+        <trim prefix="set"  suffixOverrides="," >
+            <if test="ename != null and ename != ''">
+                ename= #{ename},
+            </if>
+            <if test="job != null and job != ''">
+                job= #{job},
+            </if>
+            <if test="mgr != null ">
+                mgr= #{mgr},
+            </if>
+            <if test="hiredate != null ">
+                hiredate= #{hiredate},
+            </if>
+            <if test="sal != null">
+                sal= #{sal},
+            </if>
+            <if test="comm != null ">
+                comm =#{comm},
+            </if>
+            <if test="deptno != null ">
+                deptno= #{deptno},
+            </if>
+        </trim>
+        where  empno = #{empno}
+    </update>
+
+    <!--trim处理where-->
+    <select id="findEmpByCondition" resultType="emp">
+        select * from emp
+        <trim prefix="where" prefixOverrides="and">
+            <if test="empno != null">
+                and empno= #{empno}
+            </if>
+            <if test="ename != null and ename != ''">
+                and ename= #{ename}
+            </if>
+            <if test="job != null and job != ''">
+                and job= #{job}
+            </if>
+            <if test="mgr != null ">
+                and mgr= #{mgr}
+            </if>
+            <if test="hiredate != null ">
+                and hiredate= #{hiredate}
+            </if>
+            <if test="sal != null">
+                and sal= #{sal}
+            </if>
+            <if test="comm != null ">
+                and comm =#{comm}
+            </if>
+            <if test="deptno != null ">
+                and deptno= #{deptno}
+            </if>
+        </trim>
+    </select>
+</mapper>
