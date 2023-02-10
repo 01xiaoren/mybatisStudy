@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--约束-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--jdbc链接信息-->
+<configuration>
+    <properties resource="jdbc.properties">
+    </properties>
+    <!--  起别名-->
+    <typeAliases>
+        <!-- 文件包起别名那后缀名类的小写字母名字-->
+        <package name="com.xiaoren.pojo"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc_driver}"/>
+                <property name="url"
+                          value="${jdbc_url}"/>
+                <property name="username" value="${jdbc_username}"/>
+                <property name="password" value="${jdbc_password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--   记载映射文件路径-->
+    <mappers>
+        <package name="com.xiaoren.mapper"/>
+    </mappers>
+</configuration>
