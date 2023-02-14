@@ -9,6 +9,8 @@
     </properties>
     <!-- 核心配置文件中可以指定日志打印方式-->
     <settings>
+        <!--  二级缓存的总开关-->
+        <setting name="cacheEnabled" value="true"/>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
     <!--  起别名-->

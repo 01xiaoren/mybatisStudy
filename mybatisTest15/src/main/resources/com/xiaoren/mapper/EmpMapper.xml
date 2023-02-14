@@ -3,13 +3,28 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiaoren.mapper.EmpMapper">
+    <!--  二级缓存开关-->
+    <cache/>
     <!--
      Emp findByEmpno();
      根据员工编号查询员工信息
+      useCache="true"开启二级缓存
+      flushCache控制当前sql执行一次后是否刷新缓存
      -->
-    <select id="findEmpByEmpno" resultType="emp">
+
+    <select id="findEmpByEmpno" resultType="emp" useCache="true">
         select *
         from emp
         where empno = #{empno}
+    </select>
+
+    <!--
+    二级缓存
+
+    -->
+    <select id="findByDeptno" resultType="emp">
+        select *
+        from emp
+        where deptno = #{deptno}
     </select>
 </mapper>
